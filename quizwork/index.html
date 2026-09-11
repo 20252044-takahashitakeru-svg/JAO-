@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>脳トレ！早押しクイズ ｜ Team JAO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="badge display">TEAM JAO</div>
+  <div class="team">
+    <span>氏家 雄陽</span><span>髙橋 毅至</span>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="eyebrow display">HAYAOSHI QUIZ PROJECT</span>
+  <h1 class="display">脳トレ！<span class="hi">早押し</span>クイズ</h1>
+  <p class="lead">楽しみながら知識を鍛える —— HTML・CSS・JavaScript・PHPで開発した早押しクイズを、このページで実際に体験できます。</p>
+  <button class="hero-buzz display" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">
+    今すぐ<br>体験する
+  </button>
+</header>
+
+
+<section id="demo">
+  <div class="section-head">
+    <span class="num">03 / TRY IT</span>
+    <h2 class="display">デモを実際に遊んでみよう</h2>
+    <p>問題文が表示され終わる前にボタンを押すほど高得点。全5問でどれだけ早押しできるか挑戦してみてください。</p>
+  </div>
+
+  <div class="room-panel" id="roomPanel">
+    <div class="room-title">みんなで対戦</div>
+    <p>同じWi-Fiにつないで、合言葉を入力すると同じランキングで遊べます。</p>
+    <div class="room-controls">
+      <input id="playerName" type="text" maxlength="20" placeholder="名前（例：たかはし）">
+      <button class="room-btn primary" id="createRoomBtn">部屋を作る</button>
+      <input id="roomCode" type="text" maxlength="6" placeholder="合言葉" style="text-transform:uppercase">
+      <button class="room-btn" id="joinRoomBtn">参加する</button>
+    </div>
+    <div class="room-status" id="roomStatus">現在：ローカル1人プレイ</div>
+  </div>
+
+  <div class="quiz-shell">
+    <div class="quiz-top">
+      <span class="cat-tag display" id="catTag">脳トレ！早押しクイズ</span>
+      <div class="score-pod">
+        <span>SCORE <b class="mono" id="scoreView">0</b></span>
+        <span>Q <b class="mono" id="qCount">0</b>/5</span>
+      </div>
+    </div>
+
+    <div class="stage" id="stage">
+      <!-- JS renders start / question / end states here -->
+    </div>
+
+    <div class="ranking-panel" id="rankingPanel">
+      <div class="ranking-head"><span id="rankingTitle">SCORE RANKING</span><small id="roomLabel">LOCAL</small></div>
+      <div id="rankingList"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="display" style="color:var(--text-light);font-size:14px;margin-bottom:8px;">Team JAO — 脳トレ！早押しクイズ</div>
+    <div class="stack">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>VSCode</span>
+    </div>
+  </div>
+  <div>本ページはオープンキャンパス展示用の紹介・体験デモです。</div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
